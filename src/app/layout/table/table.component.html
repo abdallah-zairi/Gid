@@ -1,0 +1,25 @@
+<dx-tree-list
+    id="employees"
+    [dataSource]="employees"
+    keyExpr="ID"
+    parentIdExpr="Head_ID"
+    [showRowLines]="true"
+    [showBorders]="true"
+    [columnAutoWidth]="true"
+    [expandedRowKeys]="[1]">
+    <dxo-column-chooser #columnChooser
+        [enabled]="true"
+        [mode]="columnChooserModes[1].key">
+    </dxo-column-chooser>
+    
+    <dxi-column dataField="Offene Lesemeldung" caption="Position"></dxi-column>
+    <dxi-column dataField="Leseeingang bestätigt" [allowHiding]="false"></dxi-column>
+    <dxi-column dataField="Letzter Arbeitsgang"></dxi-column>
+    <dxi-column dataField="Gemarkung"></dxi-column>
+    <dxi-column dataField="FlurstückNr"></dxi-column>
+    <dxi-column dataField="Einzellage" [visible]="false"></dxi-column>
+    <dxi-column dataField="Fläche " dataType="date"></dxi-column>
+    <dxi-column dataField="Rebsorte" [visible]="false"></dxi-column>    
+    <dxi-column dataField="Projekt" caption="Position"></dxi-column>
+
+</dx-tree-list>
